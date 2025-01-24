@@ -6,12 +6,57 @@ body {
 #board {
     width: 100vw;
     height: 100vh;
-    background-color: cadetblue;
+    background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #1a1a1a);
+    background-size: 400% 400%;
     position: relative;
+    animation: gradientBG 15s ease infinite;
+    overflow: hidden;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+    overflow: hidden;
 }
 
 
 #player {
     position: absolute;
-    
+    background: linear-gradient(145deg, #000000, #595959);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.obstacle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+#gameover {
+    display: none;
+}
+
+#play-again {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}       
+
